@@ -1,6 +1,6 @@
 const Header = (props) => {
   return (
-      <h1>{props.course.name}</h1>
+      <h1>{props.course}</h1>
   )
 }
 
@@ -16,7 +16,6 @@ const Content = (props) => {
 }
 
 const Total = (props) => {
-  console.log(props);
   return (
     <p>Number of exercises {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}</p>
   )
@@ -50,7 +49,7 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course} /> 
+      <Header course={course.name} /> 
       <Content parts={course.parts} />
       <Total parts={course.parts} />
     </div>
